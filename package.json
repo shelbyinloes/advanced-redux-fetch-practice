@@ -16,7 +16,7 @@
     "react-dom": "^15.3.2",
     "react-redux": "^5.0.4",
     "redux": "^3.6.0",
-    "redux-thunk": "^2.2.0",
+    "redux-thunk": "^2.3.0",
     "whatwg-fetch": "^2.0.3"
   },
   "scripts": {
@@ -28,5 +28,17 @@
     "test": "npm run lint && react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:4001"
+  "proxy": "http://localhost:4001",
+  "description": "* Fork, Clone, yarn install, yarn start",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shelbyinloes/advanced-redux-fetch-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shelbyinloes/advanced-redux-fetch-practice/issues"
+  },
+  "homepage": "https://github.com/shelbyinloes/advanced-redux-fetch-practice#readme"
 }

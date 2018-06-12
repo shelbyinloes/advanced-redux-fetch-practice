@@ -1,17 +1,23 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import "./App.css";
 import ContactsContainer from "./containers/ContactsContainer";
 import ProductsContainer from "./containers/ProductsContainer";
 import VehiclesContainer from "./containers/VehiclesContainer";
 import CommentsContainer from "./containers/CommentsContainer";
 import CreateThingsContainer from "./containers/CreateThingsContainer";
+
+
 class App extends Component {
   constructor() {
     super();
-    this.state = {users: []};
+    this.state = {contacts: []};
   }
   componentDidMount() {
-
+    this.props.getContacts();
+    this.props.getProducts();
+    this.props.getVehicles();
+    this.props.getComments();
   }
   render() {
     return (
@@ -33,6 +39,13 @@ class App extends Component {
     );
   }
 }
+App.propTypes = {
+  getComments: PropTypes.string,
+  getContacts: PropTypes.string,
+  getVehicles: PropTypes.string,
+  getProducts: PropTypes.string,
+};
+
 export default (App);
 
 
