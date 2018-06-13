@@ -108,6 +108,33 @@ export function vehiclesFetched(vehicles) {
   };
 }
 
+export function createVehicle(vehicle) {
+  return function (dispatch) {
+    fetch("http://localhost:5100/vehicles", {
+      method: "post", 
+      body: JSON.stringify(vehicle),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    }).then(function (res) {
+      return res.json();
+    }).then(function (p) {
+      dispatch(vehicleCreated(p));
+    });
+  };
+}
+    
+export function vehicleCreated(vehicle) {
+  return {
+    type: "VEHICLE_CREATED", 
+    value: vehicle
+  };
+}
+
+
+
+
+
 //  comments
 export function fetchComments() {
   return function (dispatch) {
@@ -127,4 +154,26 @@ export function commentsFetched(comments) {
   };
 }
 
+export function createComment(comment) {
+  return function (dispatch) {
+    fetch("http://localhost:5100/comments", {
+      method: "post", 
+      body: JSON.stringify(comment),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    }).then(function (res) {
+      return res.json();
+    }).then(function (p) {
+      dispatch(commentCreated(p));
+    });
+  };
+}
+    
+export function commentCreated(comment) {
+  return {
+    type: "COMMENT_CREATED", 
+    value: comment
+  };
+}
 

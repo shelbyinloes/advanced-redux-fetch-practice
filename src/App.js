@@ -11,7 +11,12 @@ import CreateThingsContainer from "./containers/CreateThingsContainer";
 class App extends Component {
   constructor() {
     super();
-    this.state = {contacts: []};
+    this.state = {
+      contacts: [], 
+      vehicles: [],
+      comments: [],
+      products: []
+    };
   }
   componentDidMount() {
     this.props.getContacts();
