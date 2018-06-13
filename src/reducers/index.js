@@ -10,6 +10,7 @@ function products(state = [], action) {
   return state;
 }
 
+
 function contacts(state = [], action) {
   if (action.type === "CONTACTS_FETCHED") {
     return action.value;
@@ -19,6 +20,7 @@ function contacts(state = [], action) {
   }
   return state;
 }
+
 
 function vehicles(state = [], action) {
   if (action.type === "VEHICLES_FETCHED") {
@@ -30,6 +32,7 @@ function vehicles(state = [], action) {
   return state;
 }
 
+
 function comments(state = [], action) {
   if (action.type === "COMMENTS_FETCHED") {
     return action.value;
@@ -39,6 +42,7 @@ function comments(state = [], action) {
   }
   return state;
 }
+
 
 const rootReducer = combineReducers({
   contacts, products, vehicles, comments
